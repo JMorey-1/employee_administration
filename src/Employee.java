@@ -8,10 +8,15 @@ public class Employee {
     private String name;
     private String email;
     private int empNum;
+ 
+ //Manager Fields 
+   private String managerUsername;
+   private String managerPassword;
     
 //Static fields
     private static int nextEmpNum = 1;
 
+   
 
 //Constructors
     
@@ -56,8 +61,27 @@ public class Employee {
             System.out.println("Please enter valid email!");
         }
     }
+    
+//Getters and Setters
 
+  // Getter and setter for manager username    
+     public String getManagerUsername() {
+        return managerUsername;
+    }
 
+    public void setManagerUsername(String managerUsername) {
+        this.managerUsername = managerUsername;
+    }
+
+    // Getter and setter for manager password
+      public String getManagerPassword() {
+        return managerPassword;
+    }
+
+    public void setManagerPassword(String managerPassword) {
+        this.managerPassword = managerPassword;
+    }
+    
 }
 
 
