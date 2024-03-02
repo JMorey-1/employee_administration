@@ -17,8 +17,8 @@ public class EmployeeTest {
            // Print the value of variable nextEmpNum
             System.out.println("Value of nextEmpNum: " + Employee.getNextEmpNum());
      
-          //Declaring variable "m" 
-            int m = 2;
+           //Declaring variable "m" 
+             int m = 2;
      
              System.out.println("Employees with empNum above " + m + ":");
               for (Employee employee : projectGroup) {
