@@ -90,7 +90,7 @@ public class Employee {
        }
       }
     
-    // Regular expression for email validation, used in my setEmail method.
+    // Regex for email validation, used in my setEmail method.
     private boolean isValidEmail(String email) {
       String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
        return email.matches(emailRegex);

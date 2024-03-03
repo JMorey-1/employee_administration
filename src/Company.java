@@ -129,15 +129,15 @@ public class Company {
        
        //Method for the manager to manually add employees. For use in the Manager's console menu.
         public void addNewEmployee(Scanner scanner) {
-         System.out.print("\nEnter employee name: ");
-          String name = scanner.nextLine();
+          System.out.print("\nEnter employee name: ");
+            String name = scanner.nextLine();
        
           System.out.print("Enter employee email: ");
            String email = scanner.nextLine();
        
           Employee newEmployee = new Employee(name, email);
-           addNewStaff(newEmployee);
-            System.out.println("New employee added successfully.");
+             addNewStaff(newEmployee);
+               System.out.println("New employee added successfully.");
            }
        
         
