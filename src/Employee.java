@@ -3,6 +3,9 @@
 
 
 public class Employee {
+   
+//FIELDS    
+    
     
 //Instance fields
     private String name;
@@ -14,11 +17,12 @@ public class Employee {
    private String managerPassword;
     
 //Static fields
-    private static int nextEmpNum = 1;
+   private static int nextEmpNum = 1;
 
    
 
-//Constructors
+//CONSTRUCTORS
+    
     
     //Default value constructor
     public Employee() {
@@ -34,36 +38,10 @@ public class Employee {
         this.empNum = nextEmpNum++;
         
     }
-
-//Methods
     
-    public String getName(){
-        return name;
-    }
+//GETTERS AND SETTERS
 
-    public String getEmail(){
-        return email;
-    }
-
-    public int getEmpNum(){
-        return empNum;
-    }
     
-    public static int getNextEmpNum(){
-        return nextEmpNum;
-    }
-
-    public void setEmail(String email) {
-        if (email.length() > 3) {
-            this.email = email;
-          
-        } else {
-            System.out.println("Please enter valid email!");
-        }
-    }
-    
-//Getters and Setters
-
   // Getter and setter for manager username    
      public String getManagerUsername() {
         return managerUsername;
@@ -81,8 +59,44 @@ public class Employee {
     public void setManagerPassword(String managerPassword) {
         this.managerPassword = managerPassword;
     }
+
     
-}
+//METHODS
+    
+    //Accessor methods for returning Name, Email and EmpNum.
+    public String getName(){
+        return name;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public int getEmpNum(){
+        return empNum;
+    }
+    
+    //Method for returning current value of nextEmpNum
+    public static int getNextEmpNum(){
+        return nextEmpNum;
+    }
+
+    //Method to set email field to a new value, ensure length is greater than 3 and also call my email validation method.
+    public void setEmail(String email) {
+      if (email.length() > 3 && isValidEmail(email)) {
+        this.email = email;
+      } else {
+        throw new IllegalArgumentException("Invalid email address: " + email);
+       }
+      }
+    
+    // Regular expression for email validation, used in my setEmail method.
+    private boolean isValidEmail(String email) {
+      String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+       return email.matches(emailRegex);
+       }
+   
+    }
 
 
 
